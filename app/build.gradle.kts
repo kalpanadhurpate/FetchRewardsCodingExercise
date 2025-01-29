@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "me.kalpanadhurpate.fetchrewardscodingexercise"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "me.kalpanadhurpate.fetchrewardscodingexercise"
@@ -51,9 +51,17 @@ dependencies {
 
     // Converter (e.g., Gson)
     implementation(libs.converter.gson)
+
+    //for compose viewModel
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

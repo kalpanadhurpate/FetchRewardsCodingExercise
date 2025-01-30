@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             FetchRewardsCodingExerciseTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    HiringItemList(
+                    HiringList(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

@@ -57,7 +57,7 @@ fun ShowList(modifier: Modifier, hiringResponse: List<HiringListItem>) {
             horizontalAlignment = Alignment.Start
         ) {
             items(hiringResponse) { item ->
-                HiringItemView(item,modifier)
+                HiringItemView(item, modifier)
             }
 
         }
@@ -66,12 +66,17 @@ fun ShowList(modifier: Modifier, hiringResponse: List<HiringListItem>) {
 }
 
 @Composable
-fun HiringItemView(item: HiringListItem,modifier: Modifier) {
-    Card(modifier = Modifier.fillMaxSize().padding(4.dp)) {
-        Text(modifier = Modifier.padding(4.dp),
-        text = "List ID :${item.listId}   Name :${item.name}",
-        style = MaterialTheme.typography.bodyLarge
-    ) }
+fun HiringItemView(item: HiringListItem, modifier: Modifier) {
+    Card(
+        modifier
+            .fillMaxSize()
+            .padding(4.dp)) {
+        Text(
+            modifier = Modifier.padding(4.dp),
+            text = "List ID :${item.listId}   Name :${item.name}",
+            style = MaterialTheme.typography.bodyLarge
+        )
+    }
 
 
 }

@@ -46,9 +46,9 @@ fun ShowList(modifier: Modifier, hiringResponse: List<HiringListItem>) {
     Column(
         modifier
             .fillMaxSize()
-            .padding(8.dp),
+            .padding(16.dp),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.Start
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Hiring List", style = MaterialTheme.typography.labelLarge, fontSize = 20.sp)
         LazyColumn(

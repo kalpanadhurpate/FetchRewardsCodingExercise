@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")  // Apply Hilt Plugin
+
+
 }
 
 android {
@@ -56,6 +60,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.dagger)
+    implementation(libs.hilt.android)
+    kapt("com.google.dagger:hilt-compiler:2.52")
 
 
     implementation(libs.androidx.ui.graphics)

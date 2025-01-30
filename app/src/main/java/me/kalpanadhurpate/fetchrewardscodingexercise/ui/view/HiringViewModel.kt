@@ -4,15 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import me.kalpanadhurpate.fetchrewardscodingexercise.api.RetrofitInstance
 import me.kalpanadhurpate.fetchrewardscodingexercise.model.HiringListItem
 import me.kalpanadhurpate.fetchrewardscodingexercise.repository.HiringRepository
 import me.kalpanadhurpate.fetchrewardscodingexercise.util.NetworkResult
+import javax.inject.Inject
 
-class HiringViewModel : ViewModel() {
-    private val apiService = RetrofitInstance.retrofit
-    private val repository=HiringRepository(apiService)
+@HiltViewModel
+class HiringViewModel @Inject constructor(private val repository: HiringRepository) : ViewModel() {
 
     private val _listOfItems = MutableLiveData<NetworkResult<List<HiringListItem>>>()
     val listOfItems: LiveData<NetworkResult<List<HiringListItem>>> = _listOfItems

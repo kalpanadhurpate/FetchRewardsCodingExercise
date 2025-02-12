@@ -44,15 +44,12 @@ fun HiringList(modifier: Modifier, viewModel: HiringViewModel = viewModel()) {
 @Composable
 fun ShowList(modifier: Modifier, hiringResponse: List<HiringListItem>) {
     Column(
-        modifier
-            .fillMaxSize()
-            .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Hiring List", style = MaterialTheme.typography.labelLarge, fontSize = 20.sp)
         LazyColumn(
-            modifier = Modifier,
+
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.Start
         ) {
@@ -70,16 +67,15 @@ fun HiringItemView(item: HiringListItem, modifier: Modifier) {
     Card(
         modifier
             .fillMaxSize()
-            .padding(4.dp)) {
-        Text(
-            modifier = Modifier.padding(4.dp),
+            .padding(4.dp)
+    ) {
+        Text(modifier = modifier.padding(4.dp),
             text = "List ID :${item.listId}   Name :${item.name}",
             style = MaterialTheme.typography.bodyLarge
         )
     }
-
-
 }
+
 
 @Composable
 fun LoadingScreen() {

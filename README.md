@@ -10,9 +10,9 @@ FetchRewardsCodingExercise a native Android app in Kotlin with Jetpack compose t
 - **Kotlin** as it provides modern features, concise syntax, null safety.
 - **Dagger- Hilt**  for dependency injection.
 - **Retrofit and OkHttp** for making network requests to RESTful APIs.
-- **Jetpack Compose** as it is modern UI toolkit for declarative UI.
-- **MVVM Architecture** is Design pattern to separate program logic and user interface controls.
-- **Livedata** to notifies Observer objects when data changes.
+- **Jetpack Compose** as it is a modern UI toolkit for declarative UI.
+- **MVVM Architecture** is a Design pattern to separate program logic and user interface controls.
+- **Livedata** to notify Observer objects when data changes.
 - **Coroutines**  for concurrent tasks.
 
   
